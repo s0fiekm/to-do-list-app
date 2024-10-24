@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/newevent.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Todays<span class="highlight">Tasks</span></h1>
+    </header>
+
+    <div class="list-container">
+      <div id="unfinised-list" class="main">
+        <div class="list-name">
+          <h2><span class="highlight">To</span> do</h2>
+        </div>
+        <div class="events" id="events-container"></div>
+      </div>
+      <div id="finised-list" class="main">
+        <div class="list-name">
+          <h2>Done <span class="highlight">tasks</span></h2>
+        </div>
+        <div class="events" id="finished-events-container"></div>
+      </div>
+    </div>
+    <button class="new-event" id="new-event-btn">+</button>
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <h3>New <span class="highlight">Task</span></h3>
+        <div class="task-desc-container">
+          <div id="color-circle" class="color-circle"></div>
+          <div id="color-options" class="color-options">
+            <div
+              class="color-option"
+              data-color="#D0CBFF"
+              style="background-color: #d0cbff"
+            ></div>
+            <div
+              class="color-option"
+              data-color="#F0E2F8"
+              style="background-color: #f0e2f8"
+            ></div>
+            <div
+              class="color-option"
+              data-color="#D8E7FA"
+              style="background-color: #d8e7fa"
+            ></div>
+            <div
+              class="color-option"
+              data-color="#D3FFCE"
+              style="background-color: #d3ffce"
+            ></div>
+          </div>
+          <input type="text" id="task-desc" placeholder="Task description" />
+        </div>
+
+        <div class="time-container">
+          <div class="time-select">
+            <input
+              type="time"
+              id="start-time"
+              value="09:00"
+              class="time-input"
+            />
+          </div>
+          <span class="time-divider">→</span>
+          <div class="time-select">
+            <input type="time" id="end-time" value="18:00" class="time-input" />
+          </div>
+        </div>
+
+        <button id="save-task">Add</button>
+      </div>
+    </div>
+    <script src="js/todolist.js"></script>
+  </body>
+</html>
